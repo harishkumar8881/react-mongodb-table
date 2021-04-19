@@ -11,11 +11,9 @@ router.get('/products', async (req, res) => {
 });
 
 router.post('/products', async (req, res) => {
-    console.log(req.files.productImage);
     const file = req.files.productImage;
     const shortid = shortId.generate();
     const filepath = (shortid + '--' + file.name);
-    console.log(filepath);
     file.mv("src/uploads/" + filepath);
 
     const product = new Product(
