@@ -1,0 +1,31 @@
+{
+  "name": "react-mongodb-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.server.js",
+    "dev": "nodemon src/index.server.js",
+    "build": "cd client && npm run build",
+    "client": "cd client && npm start",
+    "install-client": "cd client && npm install",
+    "heroku-prebuild": "npm i -f",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-form-data": "^2.0.16",
+    "fsevents": "^2.3.2",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.4",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "shortid": "^2.2.16"
+  }
+}
