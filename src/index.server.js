@@ -14,7 +14,7 @@ env.config();
 const PORT = process.env.PORT || 2000;
 
 //mongodb connection
-mongoose.connect("mongodb+srv://harish:harish@cluster0.nnljx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
